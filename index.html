@@ -12,6 +12,27 @@
         place-items: center;
         background: #f7f7f7;
         font-family: Arial, sans-serif;
+        position: relative;
+        overflow: hidden;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='160'%3E%F0%9F%98%8A%3C/text%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: clamp(240px, 60vw, 480px);
+        opacity: 0.16;
+        z-index: 0;
+        pointer-events: none;
+      }
+
+      h1,
+      p {
+        position: relative;
+        z-index: 1;
       }
 
       h1 {
